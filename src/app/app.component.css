@@ -1,0 +1,91 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Стили для header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Логотип */
+.logo {
+    flex-shrink: 0;
+}
+
+.logo-img {
+    width: 50px; /* Небольшой размер логотипа */
+    height: auto;
+}
+
+/* Навигационное меню */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #0056b3;
+}
+
+.active-page{
+    background-color: #e60086;
+}
+
+/* Стили для main (оставляем пустым, как вы просили) */
+main {
+    min-height: 80vh; /* Для примера, чтобы футер был виден */
+}
+
+/* Стили для footer */
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(43, 43, 43);
+    border-top: 1px solid #e0e0e0;
+    color: white;
+    font-size: 14px;
+    line-height: 0.5;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 30px; /* Размер иконок соцсетей */
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 0.7; /* Эффект при наведении */
+}
