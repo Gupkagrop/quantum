@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './qubit-information.component.html',
-  styleUrl: './qubit-information.component.css'
+  styleUrl: './qubit-information.component.scss'
 })
 export class QubitInformationComponent {
 

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './quantum-mechanics-information.component.html',
-  styleUrl: './quantum-mechanics-information.component.css'
+  styleUrl: './quantum-mechanics-information.component.scss'
 })
 export class QuantumMechanicsInformationComponent {
 

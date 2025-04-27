@@ -1,36 +1,53 @@
 
-  <header>
-      <div class="logo">
-          <img src="path/to/your/logo.png" alt="Логотип" class="logo-img">
+  <header class="header">
+    
+      <div class="header__top-bar">
+        <a routerLink = "/home" routerLinkActive="active-page" ariaCurrentWhenActive="page">
+          <div class="logo">
+              <img src="quant_qnt_icon_245080.ico" alt="Logo">
+          </div>
+        </a>
+        <a routerLink = "/home" routerLinkActive="active-page" ariaCurrentWhenActive="page">
+        <h1 class="site-name">Квантовый компьютер</h1>
+        </a>
       </div>
-      <nav class="nav-menu">
-          <a routerLink = "/home" routerLinkActive="active-page" ariaCurrentWhenActive="page">Домой</a>
-          <a routerLink = "/qubit" routerLinkActive="active-page" ariaCurrentWhenActive="page">О кубитах</a>
-          <a routerLink = "/quantum-mechanics" routerLinkActive="active-page" ariaCurrentWhenActive="page">Квантовая физика</a>
-          <a routerLink = "/problems" routerLinkActive="active-page" ariaCurrentWhenActive="page">Трудности</a>
-          <a routerLink = "/types" routerLinkActive="active-page" ariaCurrentWhenActive="page">Типы</a>
-      </nav>
+    
+      <div class="header__nav-bar">
+      <nav >
+        <ul>
+          <li><a routerLink = "/types" routerLinkActive="active-page" ariaCurrentWhenActive="page">Типы</a></li>
+          <li><a routerLink = "/qubit" routerLinkActive="active-page" ariaCurrentWhenActive="page">Кубиты</a></li>
+          <li><a routerLink = "/quantum-mechanics" routerLinkActive="active-page" ariaCurrentWhenActive="page">Квантовая физика</a></li>
+          <li><a routerLink = "/problems" routerLinkActive="active-page" ariaCurrentWhenActive="page">Трудности</a></li>
+          
+        </ul>
+        </nav>
+        </div>
   </header>
 
   <main>
+    
     <router-outlet></router-outlet>
   </main>
 
-  <footer>
+  <footer class="footer">
+    
     <div class="footer-content">
-        <p>О нас: Сайт создан энтузиастом для школьного проекта с целью увелечения осведомлённости в области квантовых компьютеров</p>
-        <p>Содержание сайта взято из открытых источников, из-за чего информация представленая на нём может оказаться ложной</p>
-        <p>Ссылки на мои социальные сети представлены ниже</p>
+        
+        <p> О нас: Сайт создан энтузиастом для школьного проекта с целью увелечения осведомлённости в области квантовых компьютеров</p>
+        <p>Содержание сайта взято из открытых источников</p>
+        
         <div class="social-links">
-            <a href="https://twitter.com" target="_blank">
-                <img src="path/to/twitter-logo.png" alt="X" class="social-icon">
+            <a href="https://t.me/gupkagrop" target="_blank">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCodCp-cYwcl3YZM49XsRf7VAmUnvJ_y21NQ&s" alt="Telegram" class="social-icon">
             </a>
-            <a href="https://facebook.com" target="_blank">
-                <img src="path/to/facebook-logo.png" alt="Telegram" class="social-icon">
+            <a href="https://x.com/denislopuhov3?t=hDK0QhQYQwv1jsgrY4mFRw&s=09" target="_blank">
+                <img src="https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?semt=ais_hybrid&w=740" alt="X" class="social-icon">
             </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="path/to/instagram-logo.png" alt="Vk" class="social-icon">
+            <a href="https://vk.com/gupkagrop" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/1200px-VK_Compact_Logo_%282021-present%29.svg.png" alt="Vk" class="social-icon">
             </a>
         </div>
+        <p>2025 год</p>
     </div>
 </footer>

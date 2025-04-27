@@ -1,0 +1,173 @@
+// _header.scss - separate file for header styles
+
+// Variables
+$header-bg: #E0E1DD;
+$nav-bg: #0D1B2A;
+$nav-text-color: #fff;
+$logo-color: #0D1B2A;
+$site-name-color: $logo-color;
+$font-family: sans-serif;
+
+// Mixin for responsive font sizes
+@mixin responsive-font($pc-size, $mobile-size) {
+  font-size: $pc-size;
+
+  @media (max-width: 768px) {
+    font-size: $mobile-size;
+  }
+}
+h1{
+  text-shadow: #ffffff 1px 0 10px;
+}
+
+a {
+  color: $nav-text-color;
+  text-decoration: none;
+  @include responsive-font(1.2em, 1em); // Responsive font size
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Header Styles
+.header {
+  font-family: $font-family;
+  width: 100%; // Full width
+  position: relative;  // For positioning child elements
+
+  // Top Bar Styles (Logo + Site Name)
+  &__top-bar {
+    background-color: $header-bg;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center; // Vertically center content
+
+    .logo {
+      margin-right: 20px;
+    }
+    img {
+      height: 50px; // Adjust as needed
+    }
+    .site-name {
+      color: $site-name-color;
+      @include responsive-font(2em, 1.5em); // Responsive font size
+      font-weight: bold;
+    }
+
+    
+  }
+
+  // Navigation Bar Styles
+  &__nav-bar {
+    background-color: $nav-bg;
+    padding: 10px 20px;
+    box-shadow: 10px 5px 5px $nav-bg;
+    nav {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex; // Horizontal menu
+        justify-content: flex-start; // Align items to the start
+
+        li {
+          margin-right: 20px;
+
+          &:last-child {
+            margin-right: 0; // Remove margin from the last item
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Mobile Styles
+
+@media (max-width: 500px) {
+    
+   .header{
+  &__nav-bar {
+      nav {
+        ul {
+          flex-direction: column;
+          align-items: flex-start; 
+
+          li {
+            margin-right: 0;
+            margin-bottom: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.footer {
+  background-color: #0D1B2A; /* Тёмный фон */
+  color: #E0E1DD; /* Белый текст */
+  padding: 20px; /* Отступы сверху и снизу */
+  text-align: center; /* Выравнивание текста по центру */
+
+  .footer-content {
+    max-width: 800px; /* Ограничение ширины контента */
+    margin: 0 auto; /* Выравнивание по центру */
+
+    p {
+      margin-bottom: 10px; /* Отступ между параграфами */
+    }
+
+    .social-links {
+      display: flex; /* Размещаем логотипы в строку */
+      justify-content: center; /* Выравниваем по центру */
+      margin-top: 20px; /* Отступ сверху */
+
+      a {
+        display: inline-block; /*  Чтобы можно было задавать отступы */
+        margin: 0 10px; /* Отступы между логотипами */
+
+        img {
+          width: 30px; /* Размер логотипов */
+          height: 30px;
+          vertical-align: middle; /* Выравнивание по вертикали (полезно для инлайн-элементов) */
+          transition: opacity 0.3s ease; /* Плавное изменение прозрачности при наведении */
+
+          &:hover {
+            opacity: 0.7; /* Делаем логотип немного прозрачным при наведении */
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px; /* Уменьшаем отступы */
+    text-align: left; /* Выравниваем текст по левому краю */
+
+    .footer-content {
+      max-width: 100%; /* Занимаем всю ширину */
+
+      .social-links {
+        justify-content: flex-start; /* Выравниваем логотипы по левому краю */
+      }
+    }
+  }
+}
+
+main {
+  flex: 1;
+  background-color: #c0c0c0;
+  padding: 20px;
+  
+}
+
